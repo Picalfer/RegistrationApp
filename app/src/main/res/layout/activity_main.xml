@@ -7,50 +7,52 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/bExit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClickSignIn"
-        android:text="@string/sign_in"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button2"
+        android:id="@+id/bSignIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="276dp"
-        android:onClick="onClickSignUp"
-        android:text="@string/sign_up"
+        android:onClick="onClickSignIn"
+        android:text="@string/sign_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <Button
+        android:id="@+id/bSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickSignUp"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="@+id/bSignIn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/bSignIn" />
 
     <TextView
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/bExit"
-        app:layout_constraintEnd_toEndOf="@+id/bExit"
-        app:layout_constraintStart_toStartOf="@+id/bExit" />
+        app:layout_constraintBottom_toTopOf="@+id/bSignIn"
+        app:layout_constraintEnd_toEndOf="@+id/bSignIn"
+        app:layout_constraintStart_toStartOf="@+id/bSignIn" />
 
     <ImageView
         android:id="@+id/imAvatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/tvInfo"
-        app:layout_constraintEnd_toEndOf="@+id/bExit"
+        app:layout_constraintEnd_toEndOf="@+id/bSignIn"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/bExit"
+        app:layout_constraintStart_toStartOf="@+id/bSignIn"
         app:srcCompat="@drawable/i" />
 </androidx.constraintlayout.widget.ConstraintLayout>
